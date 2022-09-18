@@ -6,7 +6,14 @@ This is particularly useful for "fluent interfaces," such as `System.Text.String
 
 ## Usage
 
-You can configure the types affected by this suppressor by adding the `dotnet_fluent_types` key to your `.editorconfig` file and then specifying a comma-separated list of (fully-qualified metadata) type names.
+First, add the package to your .csproj file:
+```xml
+  <ItemGroup>
+    <PackageReference Include="Blokyk.Roslyn.ValueNotUsedSuppressor" Version="*" />
+  </ItemGroup>
+```
+
+Once the package restored, you can configure the types affected by this suppressor by adding the `dotnet_fluent_types` key to your `.editorconfig` file and then specifying a comma-separated list of (fully-qualified metadata) type names.
 
 For example, if you had an interface `FluentRecord<T>` inside the namespace `MyStuff.Utils`, you'd add :
 ```editorconfig
