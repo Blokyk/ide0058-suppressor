@@ -21,6 +21,7 @@
     <IsPackable>true</IsPackable>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+
     <PackageId>Blokyk.Roslyn.ValueNotUsedSuppressor</PackageId>
     <PackageVersion>1.0.0</PackageVersion>
     <Authors>blokyk</Authors>
