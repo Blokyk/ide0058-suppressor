@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build: https://raw.githubusercontent.com/Blokyk/ide0058-suppressor/main/README.md
+  build:
     runs-on: ubuntu-latest
 
     steps:
