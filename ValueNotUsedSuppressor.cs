@@ -21,7 +21,7 @@ public class ValueNotUsedSuppressor : DiagnosticSuppressor
 
     private HashSet<string> _exceptionsMetadataNames = _builtinExceptions;
     private void SetNewExceptionList(string[] names) {
-        _exceptionsMetadataNames = new(_builtinExceptions);
+        _exceptionsMetadataNames = new();
 
         foreach (var name in names) {
             var trimmedName = name.Trim();
@@ -53,6 +53,7 @@ public class ValueNotUsedSuppressor : DiagnosticSuppressor
                     SetNewExceptionList(names.Split(','));
                 }
             } else {
+                _exceptionsMetadataNames = _builtinExceptions;
                 Log("dotnet_fluent_types doesn't exist!");
                 Log(string.Join(", ", opts.Keys));
             }
